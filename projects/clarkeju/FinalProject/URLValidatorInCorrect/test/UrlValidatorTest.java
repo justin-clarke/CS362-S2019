@@ -198,11 +198,11 @@ public class UrlValidatorTest extends TestCase {
     public void testValidQuery() {
         UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
         String wholeUrl;
-        String[] validPath = {"?action=view", "?action=edit&mode=up", ""};
+        String[] validQuery = {"?action=view", "?action=edit&mode=up", ""};
 
-        for(int i = 0; i < validPath.length; i++)
+        for(int i = 0; i < validQuery.length; i++)
         {
-            wholeUrl = "http://www.google.com" + validPath[i];
+            wholeUrl = "http://www.google.com" + validQuery[i];
             assertTrue(urlVal.isValid(wholeUrl));
         }
     }
